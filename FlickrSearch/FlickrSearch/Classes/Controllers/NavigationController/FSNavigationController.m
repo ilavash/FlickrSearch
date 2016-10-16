@@ -32,4 +32,8 @@
                                                NSForegroundColorAttributeName : [UIColor fsMainTextColor]};
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+
 @end

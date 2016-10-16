@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0A1A2F1DB3939E000478E9 /* FSGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1A2E1DB3939E000478E9 /* FSGalleryViewController.m */; };
+		4D0A1A321DB39622000478E9 /* FSPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1A311DB39622000478E9 /* FSPhotoDetailViewController.m */; };
 		4DBC977A1DB2639D00EEFF13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBC97711DB2639D00EEFF13 /* AppDelegate.m */; };
 		4DBC977B1DB2639D00EEFF13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBC97731DB2639D00EEFF13 /* Assets.xcassets */; };
 		4DBC977C1DB2639D00EEFF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DBC97741DB2639D00EEFF13 /* LaunchScreen.storyboard */; };
@@ -34,6 +36,10 @@
 /* Begin PBXFileReference section */
 		243328ADBDCFCB5DCE93E800 /* libPods-FlickrSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlickrSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4513F566CBED25E8BDC61D5E /* Pods-FlickrSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrSearch/Pods-FlickrSearch.release.xcconfig"; sourceTree = "<group>"; };
+		4D0A1A2D1DB3939E000478E9 /* FSGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSGalleryViewController.h; sourceTree = "<group>"; };
+		4D0A1A2E1DB3939E000478E9 /* FSGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSGalleryViewController.m; sourceTree = "<group>"; };
+		4D0A1A301DB39622000478E9 /* FSPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPhotoDetailViewController.h; sourceTree = "<group>"; };
+		4D0A1A311DB39622000478E9 /* FSPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPhotoDetailViewController.m; sourceTree = "<group>"; };
 		4DBC97541DB25EB600EEFF13 /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBC97701DB2639D00EEFF13 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4DBC97711DB2639D00EEFF13 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +215,10 @@
 		4DBC97831DB265F100EEFF13 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				4D0A1A2D1DB3939E000478E9 /* FSGalleryViewController.h */,
+				4D0A1A2E1DB3939E000478E9 /* FSGalleryViewController.m */,
+				4D0A1A301DB39622000478E9 /* FSPhotoDetailViewController.h */,
+				4D0A1A311DB39622000478E9 /* FSPhotoDetailViewController.m */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -393,6 +403,7 @@
 				TargetAttributes = {
 					4DBC97531DB25EB600EEFF13 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7J6EH75HT4;
 					};
 				};
 			};
@@ -497,6 +508,8 @@
 				4DBC97BA1DB28EDF00EEFF13 /* FSPhotosResponseModel.m in Sources */,
 				4DBC977A1DB2639D00EEFF13 /* AppDelegate.m in Sources */,
 				4DBC97AD1DB2835700EEFF13 /* FSCollectionPresenterFactory.m in Sources */,
+				4D0A1A2F1DB3939E000478E9 /* FSGalleryViewController.m in Sources */,
+				4D0A1A321DB39622000478E9 /* FSPhotoDetailViewController.m in Sources */,
 				4DBC97A61DB27FD400EEFF13 /* FSThreeColumnsPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +606,7 @@
 			baseConfigurationReference = E2BD6DCE67A05934A3851A27 /* Pods-FlickrSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7J6EH75HT4;
 				INFOPLIST_FILE = "$(SRCROOT)/FlickrSearch/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -606,6 +620,7 @@
 			baseConfigurationReference = 4513F566CBED25E8BDC61D5E /* Pods-FlickrSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7J6EH75HT4;
 				INFOPLIST_FILE = "$(SRCROOT)/FlickrSearch/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

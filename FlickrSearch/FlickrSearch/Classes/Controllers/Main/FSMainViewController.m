@@ -11,10 +11,12 @@
 #import "FSCollectionPresenterFactory.h"
 #import "FSDataLoader.h"
 #import "FSPhotoModel.h"
+#import "FSGalleryViewController.h"
 
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 
 static NSString *kSectionHeaderReuseId = @"sectionHeaderView";
+static NSString *kToGalleryVcSegueId = @"toGalleryVcSegueId";
 
 @interface FSMainViewController ()
     <
@@ -30,9 +32,6 @@ static NSString *kSectionHeaderReuseId = @"sectionHeaderView";
 @property (strong, nonatomic) FSCollectionHeaderView *header;
 @property (assign, nonatomic) FSCollectionType presentationType;
 
-
-
-
 @end
 
 @implementation FSMainViewController
@@ -40,6 +39,12 @@ static NSString *kSectionHeaderReuseId = @"sectionHeaderView";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUp];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    UICollectionViewFlowLayout *flowLayout = (id)self.collectionView.collectionViewLayout;
+    [flowLayout invalidateLayout];
 }
 
 #pragma mark - Configuration
@@ -53,6 +58,7 @@ static NSString *kSectionHeaderReuseId = @"sectionHeaderView";
 - (void)setUpUI {
     [self configureSearchBar];
     [self configureCollectionView];
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 }
 
 - (void)configureCollectionView {
@@ -119,6 +125,10 @@ static NSString *kSectionHeaderReuseId = @"sectionHeaderView";
     [view selectType:self.presentationType];
     
     return view;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kToGalleryVcSegueId sender:indexPath];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -201,9 +211,23 @@ static NSString *kSectionHeaderReuseId = @"sectionHeaderView";
         [label setAttributedText:str];
         emptyView = label;
     }
-    
+    [self.collectionView setContentOffset:CGPointMake(0.0f, -64.0f)];
+
     return emptyView;
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kToGalleryVcSegueId]) {
+        
+        FSGalleryViewController *vc = [segue destinationViewController];
+        [vc setItems:[[self.dataLoader photos] copy]];
+        NSIndexPath *indexPath = sender;
+        [vc setSelectedIndex:indexPath.row];
+    }
+}
+
 
 
 

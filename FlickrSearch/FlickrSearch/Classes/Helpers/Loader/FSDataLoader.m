@@ -19,7 +19,6 @@
 
 @property (copy, nonatomic) NSString *text;
 @property (assign, nonatomic) NSInteger page;
-@property (strong, nonatomic) NSMutableArray<FSPhotoModel *> *photos;
 
 @end
 

@@ -10,6 +10,11 @@
 
 @implementation FSImageWithTextCollectionViewCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self.photoImageView setBackgroundColor:[UIColor fsNavigationBarColor]];
+}
+
 - (void)configWithPhotoModel:(FSPhotoModel *)photoModel {
     self.photoImageView.image = nil;
     [self.nameLabel setText:photoModel.title];

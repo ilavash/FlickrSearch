@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, FSDataLoaderState) {
 @interface FSDataLoader : NSObject
 
 @property (assign, nonatomic) FSDataLoaderState state;
+@property (strong, nonatomic) NSMutableArray<FSPhotoModel *> *photos;
 
 - (void)searchPhotos:(NSString *)text
             complete:(dispatch_block_t)completion;

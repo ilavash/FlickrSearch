@@ -10,6 +10,11 @@
 
 @implementation FSOnlyImageCollectionCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self.photoImageView setBackgroundColor:[UIColor fsNavigationBarColor]];
+}
+
 - (void)configWithPhotoModel:(FSPhotoModel *)photoModel {
     self.photoImageView.image = nil;
     NSURL *url = [NSURL URLWithString:[photoModel mediumUrl] ? : [photoModel smallUrl]];
