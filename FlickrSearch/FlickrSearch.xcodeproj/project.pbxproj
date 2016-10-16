@@ -30,6 +30,7 @@
 		4DBC97C41DB29A3D00EEFF13 /* FSDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBC97C31DB29A3D00EEFF13 /* FSDataLoader.m */; };
 		4DBC97C71DB29D0B00EEFF13 /* FSOnlyImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBC97C61DB29D0B00EEFF13 /* FSOnlyImageCollectionCell.m */; };
 		4DBC97CD1DB2D8EF00EEFF13 /* FSImageWithTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBC97CC1DB2D8EF00EEFF13 /* FSImageWithTextCollectionViewCell.m */; };
+		4DCE578E1DB3D5A300F9B609 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DCE578D1DB3D5A300F9B609 /* Localizable.strings */; };
 		8601559A2879174B93A86505 /* libPods-FlickrSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243328ADBDCFCB5DCE93E800 /* libPods-FlickrSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		4DBC97CA1DB2D68400EEFF13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4DBC97CB1DB2D8EF00EEFF13 /* FSImageWithTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageWithTextCollectionViewCell.h; sourceTree = "<group>"; };
 		4DBC97CC1DB2D8EF00EEFF13 /* FSImageWithTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageWithTextCollectionViewCell.m; sourceTree = "<group>"; };
+		4DCE578D1DB3D5A300F9B609 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E2BD6DCE67A05934A3851A27 /* Pods-FlickrSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrSearch/Pods-FlickrSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +182,7 @@
 				4DBC97781DB2639D00EEFF13 /* Info.plist */,
 				4DBC97791DB2639D00EEFF13 /* main.m */,
 				4DBC97CA1DB2D68400EEFF13 /* PrefixHeader.pch */,
+				4DCE578D1DB3D5A300F9B609 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCE578E1DB3D5A300F9B609 /* Localizable.strings in Resources */,
 				4DBC97961DB274A800EEFF13 /* FSCollectionHeaderView.xib in Resources */,
 				4DBC977D1DB2639D00EEFF13 /* Main.storyboard in Resources */,
 				4DBC977B1DB2639D00EEFF13 /* Assets.xcassets in Resources */,

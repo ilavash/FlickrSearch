@@ -76,11 +76,13 @@ static NSString *kToGalleryVcSegueId = @"toGalleryVcSegueId";
     UISearchBar *bar = [[UISearchBar alloc] init];
     [bar setBarStyle:UIBarStyleDefault];
     [bar setTintColor:[UIColor fsMainTextColor]];
-    [[UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setDefaultTextAttributes:@{NSForegroundColorAttributeName:[UIColor fsMainTextColor]}];
-
+    [bar setReturnKeyType:UIReturnKeyDone];
     [bar setSearchBarStyle:UISearchBarStyleMinimal];
     [bar setKeyboardAppearance:UIKeyboardAppearanceDark];
     [bar setDelegate:self];
+    
+    [[UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setDefaultTextAttributes:@{NSForegroundColorAttributeName:[UIColor fsMainTextColor]}];
+    
     [self.navigationItem setTitleView:bar];
     self.searchbar = bar;
 }
@@ -109,6 +111,10 @@ static NSString *kToGalleryVcSegueId = @"toGalleryVcSegueId";
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self performSelector:@selector(search:) withObject:searchText afterDelay:0.5f];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
 }
 
 
@@ -191,13 +197,13 @@ static NSString *kToGalleryVcSegueId = @"toGalleryVcSegueId";
         NSString *title= @"";
         switch (self.dataLoader.state) {
             case FSDataLoaderStateNoSearchQuery:
-                title = @"Start searching";
+                title = NSLocalizedString(@"start_searching_key", nil);
                 break;
             case FSDataLoaderStateNoData:
-                title = @"Nothing... Try another keyword.";
+                title = NSLocalizedString(@"nothing_found_key", nil) ;
                 break;
             case FSDataLoaderStateError:
-                title = @"Error! Something went wrong!";
+                title = NSLocalizedString(@"error_key", nil);
                 break;
             default:
                 break;

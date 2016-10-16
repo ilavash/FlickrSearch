@@ -171,18 +171,25 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2y9-Yo-J1N" firstAttribute="width" secondItem="2wV-U6-A11" secondAttribute="width" id="18B-Tt-ygi"/>
+                            <constraint firstItem="2y9-Yo-J1N" firstAttribute="height" secondItem="2wV-U6-A11" secondAttribute="height" id="27E-9g-N7p"/>
                             <constraint firstItem="2y9-Yo-J1N" firstAttribute="leading" secondItem="2wV-U6-A11" secondAttribute="leading" id="EJM-0n-Pag"/>
                             <constraint firstItem="2y9-Yo-J1N" firstAttribute="top" secondItem="2wV-U6-A11" secondAttribute="top" id="VKE-GB-UR4"/>
                             <constraint firstItem="2y9-Yo-J1N" firstAttribute="top" secondItem="Eer-1R-O4Q" secondAttribute="bottom" id="YVh-8S-Q2b"/>
+                            <constraint firstItem="Dci-VK-AKU" firstAttribute="top" secondItem="2y9-Yo-J1N" secondAttribute="bottom" id="n1j-Te-gpi"/>
                             <constraint firstItem="Dci-VK-AKU" firstAttribute="top" secondItem="2y9-Yo-J1N" secondAttribute="bottom" id="vCg-SH-s5F"/>
                             <constraint firstAttribute="trailing" secondItem="2y9-Yo-J1N" secondAttribute="trailing" id="wmQ-ij-QdG"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="18B-Tt-ygi"/>
+                                <exclude reference="27E-9g-N7p"/>
                                 <exclude reference="VKE-GB-UR4"/>
+                                <exclude reference="vCg-SH-s5F"/>
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="imageView" destination="j7F-fD-fRg" id="AWf-rA-FvM"/>
                         <outlet property="scrollView" destination="2y9-Yo-J1N" id="QpN-ul-bRq"/>

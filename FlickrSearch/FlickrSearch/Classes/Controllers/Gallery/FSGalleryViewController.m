@@ -51,7 +51,7 @@
     [self.view addSubview:pageVc.view];
     [self.view sendSubviewToBack:pageVc.view];
     [pageVc didMoveToParentViewController:self];
-    
+    self.automaticallyAdjustsScrollViewInsets = false;
     if (self.items.count > 0) {
         FSPhotoDetailViewController *vc = [self contentViewControllerForIndex:self.selectedIndex];
         [pageVc setViewControllers:@[vc]

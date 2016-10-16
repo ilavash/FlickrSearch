@@ -106,9 +106,11 @@
             }
         }
     } failure:^(NSError *error) {
-        self.state = FSDataLoaderStateError;
-        if (completion) {
-            completion();
+        if (error.code != -999) { //operation was cancelled manually
+            self.state = FSDataLoaderStateError;
+            if (completion) {
+                completion();
+            }
         }
     }];
 }

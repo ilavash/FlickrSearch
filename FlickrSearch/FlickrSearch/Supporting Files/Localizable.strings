@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  FlickrSearch
+
+  Created by Illia on 10/16/16.
+  Copyright © 2016 illia. All rights reserved.
+*/
+
+"start_searching_key" = "Start searching";
+"nothing_found_key" = "Nothing... Try another keyword.";
+"error_key" = "Error! Something went wrong!";
