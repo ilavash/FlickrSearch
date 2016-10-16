@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  FlickrSearch
+//
+//  Created by Illia on 10/16/16.
+//  Copyright © 2016 illia. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "FSConstants.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIColor+FSColors.h"
+
+#endif /* PrefixHeader_pch */
