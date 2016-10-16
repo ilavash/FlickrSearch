@@ -62,8 +62,6 @@
     
     
     self.pageViewController = pageVc;
-
-    
 }
 
 #pragma mark - Common

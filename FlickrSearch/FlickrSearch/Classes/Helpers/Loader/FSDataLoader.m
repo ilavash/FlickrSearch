@@ -11,12 +11,9 @@
 #import "FSPhotosResponseModel.h"
 #import "FSPhotosListModel.h"
 
-
-
 @interface FSDataLoader ()
 
 @property (strong, nonatomic) FSFlickrApiClient *client;
-
 @property (copy, nonatomic) NSString *text;
 @property (assign, nonatomic) NSInteger page;
 

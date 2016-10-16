@@ -10,6 +10,4 @@
 
 @interface FSMainViewController : UICollectionViewController
 
-
-
 @end

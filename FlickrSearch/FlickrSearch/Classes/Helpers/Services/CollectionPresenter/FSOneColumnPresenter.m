@@ -38,6 +38,13 @@ static NSString *kImageCellReuseId = @"photoTextCell";
     return kCellSpacing;
 }
 
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//    NSInteger numberOfLines = 1;
+//    CGFloat itemWidth = collectionView.frame.size.width  - kCellSpacing;
+//    CGFloat inset = MAX(kCellSpacing, floor( (collectionView.bounds.size.width - (numberOfLines * itemWidth) - (numberOfLines-1)*kCellSpacing) / 1 ));
+    return UIEdgeInsetsZero;
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItem:(FSPhotoModel *)photoModel atIndexPath:(NSIndexPath *)indexPath {
     FSImageWithTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kImageCellReuseId forIndexPath:indexPath];
     [cell configWithPhotoModel:photoModel];

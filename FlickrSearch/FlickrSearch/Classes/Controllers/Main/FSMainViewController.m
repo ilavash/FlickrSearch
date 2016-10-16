@@ -159,6 +159,10 @@ static NSString *kToGalleryVcSegueId = @"toGalleryVcSegueId";
     return [self.collectionPresenter collectionView:collectionView layout:collectionViewLayout sizeForItem:item atIndexPath:indexPath];
 }
 
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return [self.collectionPresenter collectionView:collectionView layout:collectionViewLayout insetForSectionAtIndex:section];
+}
+
 #pragma mark - UISCrollViewDelegate
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
@@ -217,6 +221,7 @@ static NSString *kToGalleryVcSegueId = @"toGalleryVcSegueId";
         [label setAttributedText:str];
         emptyView = label;
     }
+    
     [self.collectionView setContentOffset:CGPointMake(0.0f, -64.0f)];
 
     return emptyView;
