@@ -1,6 +1,6 @@
 # FlickrSearch
 
-Search images in flickr by keyword.
+Search images in Flickr by keyword.
 Just demo app.
 
 Language: Objective-C
